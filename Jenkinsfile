@@ -7,5 +7,12 @@ pipeline {
       }
     }
 
+    stage('Second') {
+      steps {
+        input(message: 'Deploy to QA?', ok: 'Yes')
+        echo 'Hello Girish'
+      }
+    }
+
   }
 }
